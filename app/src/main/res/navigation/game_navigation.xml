@@ -2,19 +2,17 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_game">
+    android:id="@+id/game_navigation"
+    app:startDestination="@id/gameFragment">
 
     <fragment
-        android:id="@+id/nav_game"
+        android:id="@+id/gameFragment"
         android:name="com.example.free_games.presentation.game.GameFragment"
-        android:label="@string/menu_game"
+        android:label="fragment_game"
         tools:layout="@layout/fragment_game" />
-
     <fragment
-        android:id="@+id/nav_poe"
-        android:name="com.example.free_games.presentation.game.poe.POEFragment"
-        android:label="@string/menu_poe"
-        tools:layout="@layout/fragment_poe" />
-
+        android:id="@+id/game_detail"
+        android:name="com.example.free_games.game_detail"
+        android:label="fragment_game_detail"
+        tools:layout="@layout/fragment_game_detail" />
 </navigation>
