@@ -5,5 +5,5 @@ import com.example.free_games.domain.model.GameDetail
 
 interface GameRepository {
     suspend fun getGames(): List<Game>
-    suspend fun getGameDetail(): GameDetail
+    suspend fun getGameDetail(id:Int): GameDetail
 }

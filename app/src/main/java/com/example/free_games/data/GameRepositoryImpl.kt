@@ -1,7 +1,7 @@
 package com.example.free_games.data
 
-import com.example.free_games.domain.model.Game
 import com.example.free_games.domain.GameRepository
+import com.example.free_games.domain.model.Game
 import com.example.free_games.domain.model.GameDetail
 
 class GameRepositoryImpl(
@@ -12,7 +12,8 @@ class GameRepositoryImpl(
         return gamesList.map { it.toDomain() }
     }
 
-    override suspend fun getGameDetail(): GameDetail {
-        TODO("Not yet implemented")
+    override suspend fun getGameDetail(id: Int): GameDetail {
+        val gameDetail = gameApi.getGameDetail(id)
+        return gameDetail.toDomain()
     }
 }
